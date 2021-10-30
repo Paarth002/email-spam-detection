@@ -6,9 +6,6 @@ from sklearn.naive_bayes import MultinomialNB
 import os
 from sklearn.metrics import confusion_matrix, plot_confusion_matrix
 
-# train_dir1 = r"C:\Users\PARTH\PycharmProjects\email-spam\enron1\ham"
-# train_dir2 = r"C:\Users\PARTH\PycharmProjects\email-spam\enron1\spam"
-
 train_dir1 = "enron1/ham"
 train_dir2 = "enron1/spam"
 
@@ -108,6 +105,8 @@ def detect():
             flash("Email is not spam", "success")
         else:
             flash("Email is spam", "error")
+
+        return render_template("analysis.html", subj=subj, email=email)
 
     return render_template("home.html")
 

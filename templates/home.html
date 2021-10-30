@@ -10,20 +10,13 @@
 <div class="parent">
   <div class="center1">
       <form action="/detect" method="POST" id="form">
-      <label for="subj" name="txt">Enter Subject:</label> <br>
-      <input type="text" id="subj" name="subj"> <br>
-          <label name="txt">Enter Email:</label> <br>
-      <textarea  rows="20" cols="50" name="ta" required></textarea><br>
+      <label for="subj" id="esub">Enter Subject:</label> <br>
+      <input type="text" id="subj" name="subj"> <br><br><br>
+          <label name="txt" id="em">Enter Email:</label> <br>
+      <textarea  rows="20" cols="50" name="ta" id="ta" required></textarea><br>
           <input type="submit" value="Analyse" id="sub">
       </form>
   </div>
-{% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-    {% for category, message in messages %}
-      <div class="alert {{ category }}"> {{ message }} </div>
-    {% endfor %}
-  {% endif %}
-{% endwith %}
 </div>
 
 </body>

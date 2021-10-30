@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <title>Email Spam Detection</title>
+</head>
+<body>
+<h1>Email Spam Detection</h1>
+<div class="parent">
+  <div class="center2">
+      <p><b>Subject:</b> {{subj}}</p><hr>
+      <p><b>Email: </b><br> {{email}}</p>
+  </div>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert {{ category }}"> {{ message }} </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+</div>
+</body>
+</html>
