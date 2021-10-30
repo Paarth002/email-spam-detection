@@ -1,0 +1,66 @@
+*{
+    margin : 0
+    padding: 0
+}
+body{
+    background: url('b4.jpg') no-repeat center;
+	background-attachment:fixed;
+	background-size: cover;
+	font-family: sens-serif;
+}
+h1{
+    display:block;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 50px;
+    color: #FF3000;
+}
+
+.parent {
+    display: block;
+    text-align: center;
+    margin-top:100px;
+}
+
+
+#txt{
+    font-size: 30px;
+}
+
+#sent{
+    font-size: 30px;
+}
+
+#sub{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: none;
+	outline: none;
+	background: #FF652F;
+	font-size: 16px;
+	letter-spacing: 1px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.alert{
+    margin: 20px 40% 0 40%;
+    padding: 10px;
+	color: #FF652F;
+	background-color: rgba(0,0,0,0.65);
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.alert.success {
+
+  background-color: rgba(0,0,0,0.65);
+  color: #00FF00;
+}
+
+.alert.error {
+  background-color: rgba(255,0,0,0.75);
+  color: black;
+}

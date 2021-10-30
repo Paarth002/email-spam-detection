@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <title>Email Spam Detection</title>
+</head>
+<body>
+<h1>Email Spam Detection</h1>
+<div class="parent">
+  <div class="center1">
+      <form action="/detect" method="POST" id="form">
+      <label for="subj" name="txt">Enter Subject:</label> <br>
+      <input type="text" id="subj" name="subj"> <br>
+          <label name="txt">Enter Email:</label> <br>
+      <textarea  rows="20" cols="50" name="ta" required></textarea><br>
+          <input type="submit" value="Analyse" id="sub">
+      </form>
+  </div>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert {{ category }}"> {{ message }} </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+</div>
+
+</body>
+</html>
