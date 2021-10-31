@@ -112,3 +112,7 @@ def detect():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+#Project hosted on: https://group2-lab6.herokuapp.com/
